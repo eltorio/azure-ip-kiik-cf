@@ -1,0 +1,14 @@
+{
+    "routes": [
+        {
+            "route": "/example",
+            "rewrite": "/example.html"
+        }
+    ],
+    "navigationFallback": {
+        "rewrite": "/index.html"
+    },
+    "platform": {
+        "apiRuntime": "node:18"
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "azure-ip-kiik-cf",
+  "version": "1.0.0",
+  "description": "minimal ip get",
+  "scripts": {
+    "start": "npx @azure/static-web-apps-cli start . --swa-config-location ./ -s -e localhost-cert.pem -k localhost-key.pem --api-location ./api -t 120",
+    "prestart": "cd api && npx tsc -w &",
+    "create-cert": "openssl req -x509 -newkey rsa:4096 -keyout localhost-key.pem -out localhost-cert.pem -sha256 -nodes -days 365",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ronan Le Meillat",
+  "license": "AGPL-3.0",
+  "devDependencies": {
+    "typescript": "^5.1.3"
+  }
+}
