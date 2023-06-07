@@ -1,8 +1,8 @@
 {
     "routes": [
         {
-            "route": "/example",
-            "rewrite": "/example.html"
+            "route": "/",
+            "rewrite": "/api/hello-world"
         }
     ],
     "navigationFallback": {
