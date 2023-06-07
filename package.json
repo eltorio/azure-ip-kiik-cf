@@ -7,7 +7,7 @@
     "prestart": "cd api && npx tsc -w &",
     "create-cert": "openssl req -x509 -newkey rsa:4096 -keyout localhost-key.pem -out localhost-cert.pem -sha256 -nodes -days 365",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build":"exit 0"
+    "build": "echo \"Info: nothing to do\" && exit 0"
   },
   "author": "Ronan Le Meillat",
   "license": "AGPL-3.0",
