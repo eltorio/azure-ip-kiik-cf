@@ -9,6 +9,9 @@ body {
   background-color: #F4F7FC;
   margin: 40px;
 }
+.ip {
+  text-align: center;
+}
 
 .ip_card {
   padding: 20px;

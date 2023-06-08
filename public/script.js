@@ -27,7 +27,7 @@ window.addEventListener("load", function () {
       imgSrc =
         "https://flagcdn.com/h20/" + data.country.toLowerCase() + ".png";
       imgTag.setAttribute("src", imgSrc);
-      imgTag.setAttribute("id","flagimg");
+      imgTag.setAttribute("id", "flagimg");
       imgTag.setAttribute("title", data.country_name);
       document.getElementById("flag").appendChild(imgTag);
       document.getElementById("ip").innerText = data.ip;
@@ -36,6 +36,15 @@ window.addEventListener("load", function () {
       ).innerText = `${data.city}, ${data.country_name}`;
       document.getElementById("asn").innerText = data.asn;
       document.getElementById("org").innerText = data.org;
+      if (data.version !== "IPv4") {
+        fetch("https://1.1.1.1/cdn-cgi/trace")
+          .then((response) => response.text())
+          .then((text) => {
+           const textArr = text.trim().split('\n').map(e=>e.split('='));
+           _1_1_1_1Parsed = Object.fromEntries(textArr)
+           document.getElementById("ip").innerText = data.ip +'\n'+_1_1_1_1Parsed.ip;
+          })
+      }
     });
   document.getElementById("machine-name").innerText = OSName;
   document.getElementById("cookies").innerText = navigator.cookieEnabled
