@@ -1,7 +1,7 @@
 {
     "routes": [
         {
-            "route": "/",
+            "route": "/json",
             "rewrite": "/api/hello-world"
         }
     ],
