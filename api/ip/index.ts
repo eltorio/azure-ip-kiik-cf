@@ -1,5 +1,5 @@
 import { AzureFunction, Context, HttpRequest } from "@azure/functions"
-import { parseIpHeader } from "../common/azure-ip";
+import { parseIpHeader } from "../common/azure-ip.js";
 
 
 const httpTrigger: AzureFunction = async function (context: Context, req: HttpRequest): Promise<void> {

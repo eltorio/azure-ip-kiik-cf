@@ -1,3 +1,4 @@
+import fetch from 'got-fetch'
 export interface IpApiResponse {
     ip: string
     network: string

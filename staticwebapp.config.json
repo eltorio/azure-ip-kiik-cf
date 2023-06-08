@@ -1,11 +1,11 @@
 {
     "routes": [
         {
-            "route": "/json",
+            "route": "/json*",
             "rewrite": "/api/json"
         },
         {
-            "route": "/ip",
+            "route": "/ip*",
             "rewrite": "/api/ip"
         }
     ],
