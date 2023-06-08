@@ -1,18 +1,18 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
 
 body {
-	font-family: "Montserrat", sans-serif;
-	min-height: 100vh;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #F4F7FC;
   margin: 40px;
 }
 
 .ip_card {
   padding: 20px;
-  width: 400px;
+  width: fit-content;
   height: auto;
   background-color: #fff;
   border-radius: 8px;
@@ -28,7 +28,7 @@ body {
 }
 
 .ip_card:hover {
-    box-shadow: 14px 14px 30px rgba(55, 84, 170, 0.15),
+  box-shadow: 14px 14px 30px rgba(55, 84, 170, 0.15),
     -14px -14px 40px rgba(255, 255, 255, 1),
     inset 0px 0px 8px rgba(255, 255, 255, 0.2),
     inset 14px 14px 30px rgba(55, 84, 170, 0),
@@ -36,15 +36,14 @@ body {
     0px 0px 8px rgba(255, 255, 255, 0);
 }
 
-.top  {
+.top {
   display: flex;
   justify-content: space-between;
 }
 
 .main {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .location {
@@ -57,15 +56,7 @@ body {
   color: #a3a3a3;
 }
 
-#location {
-  font-size: 14px;
-  color: #616161;
-  font-weight: 600;
-  margin-top: 5px;  
-  margin-bottom: 15px;
-}
-
-#machine-name {
+.textstd {
   font-size: 14px;
   color: #616161;
   font-weight: 600;
@@ -73,23 +64,11 @@ body {
   margin-bottom: 15px;
 }
 
-#screen-resolution {
-  font-size: 14px;
-  color: #616161;
-  font-weight: 600;
-  margin-top: 5px;
-  margin-bottom: 15px;
-}
 
-#cookies {
-  font-size: 14px;
-  color: #616161;
-  font-weight: 600;
-  margin-top: 5px;
-  margin-bottom: 15px;
+#flagimg {
+  margin-left: 0.2em;
 }
 
 .breaker {
   border: 0.1px solid #e2e2e2;
 }
-

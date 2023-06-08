@@ -21,18 +21,21 @@ window.addEventListener("load", function () {
   if (window.navigator.userAgent.indexOf("Mac") != -1) OSName = "Mac/iOS";
   if (window.navigator.userAgent.indexOf("X11") != -1) OSName = "UNIX";
   if (window.navigator.userAgent.indexOf("Linux") != -1) OSName = "Linux";
-  fetch("https://geo.qualaroo.com/json/") //https://ip-api.com/docs/api:json
+  fetch("https://ipapi.co/json/")
     .then((response) => response.json())
     .then((data) => {
       imgSrc =
-        "https://flagcdn.com/32x24/" + data.country_code.toLowerCase() + ".png";
+        "https://flagcdn.com/h20/" + data.country.toLowerCase() + ".png";
       imgTag.setAttribute("src", imgSrc);
+      imgTag.setAttribute("id","flagimg");
       imgTag.setAttribute("title", data.country_name);
       document.getElementById("flag").appendChild(imgTag);
       document.getElementById("ip").innerText = data.ip;
       document.getElementById(
         "location"
       ).innerText = `${data.city}, ${data.country_name}`;
+      document.getElementById("asn").innerText = data.asn;
+      document.getElementById("org").innerText = data.org;
     });
   document.getElementById("machine-name").innerText = OSName;
   document.getElementById("cookies").innerText = navigator.cookieEnabled
