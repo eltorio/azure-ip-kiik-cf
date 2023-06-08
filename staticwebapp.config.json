@@ -2,7 +2,11 @@
     "routes": [
         {
             "route": "/json",
-            "rewrite": "/api/hello-world"
+            "rewrite": "/api/json"
+        },
+        {
+            "route": "/ip",
+            "rewrite": "/api/ip"
         }
     ],
     "navigationFallback": {
