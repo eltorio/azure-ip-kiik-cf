@@ -16,7 +16,7 @@ body {
   height: auto;
   background-color: #fff;
   border-radius: 8px;
-  font-size: 40px;
+  font-size: 20px;
   cursor: pointer;
   box-shadow: 7px 7px 15px rgba(55, 84, 170, 0.15),
     -7px -7px 20px rgba(255, 255, 255, 1),
@@ -25,6 +25,12 @@ body {
     inset -7px -7px 20px rgba(255, 255, 255, 0),
     0px 0px 4px rgba(255, 255, 255, 0);
   transition: 0.8s;
+}
+
+@media screen and (min-width: 800px) {
+  .ip_card {
+    font-size: 40px;
+  }
 }
 
 .ip_card:hover {
@@ -50,19 +56,32 @@ body {
   width: 100%;
 }
 
-
 .title {
-  font-size: 12px;
+  font-size: 8px;
   color: #a3a3a3;
 }
 
 .textstd {
-  font-size: 14px;
+  font-size: 10px;
   color: #616161;
   font-weight: 600;
   margin-top: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
+
+@media screen and (min-width: 800px) {
+  .title {
+    font-size: 12px;
+  }
+
+  .textstd {
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+}
+
 
 
 #flagimg {
