@@ -37,8 +37,9 @@ export function parseIpHeader(header: string): string {
 }
 
 export function getIpInfo(ip: string): Promise<IpApiResponse> {
-    const url = `https://ipapi.co/${ip}/json/`
-    //console.log(url)
+    const API_KEY = process.env.API_KEY;
+    console.log(API_KEY);
+    const url = `https://ipapi.co/${ip}/json/?key=${API_KEY}`
     return new Promise<IpApiResponse>((resolve) => {
         fetch(url)
             .then((response) => { 
